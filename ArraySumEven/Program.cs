@@ -11,7 +11,6 @@ static int[] GetRandomArray(uint Length, int minValue, int maxValue)
     Random random = new Random();
     for (int i = 0; i < yourarray.Length; i++)
         yourarray[i] = random.Next(minValue, maxValue);
-
     return yourarray;
 }
 
