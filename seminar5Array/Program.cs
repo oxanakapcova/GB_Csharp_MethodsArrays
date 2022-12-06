@@ -6,18 +6,13 @@
 чисел равна 29, сумма отрицательных равна -20.
 */
 Console.WriteLine("Hello, Seminar 5!");
-
-// task 31
-
 void InputArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
         array[i] = new Random().Next(-9, 10);
 }
-
-
 void ReleaseArray(int[] array)
-{
+{ //высвобождение -release
     int sumPositive = 0, sumNegative = 0;
     for (int i = 0; i < array.Length; i++)
     {
@@ -29,12 +24,10 @@ void ReleaseArray(int[] array)
     Console.WriteLine($"Сумма положительных чисел в массиве {sumPositive}");
     Console.WriteLine($"Сумма отрицательных чисел в массиве {sumNegative}");
 }
-
-
 Console.Clear();
 Console.Write("Введите кол-во элементов массива: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[n];
+int count = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[count];
 InputArray(array);
 Console.WriteLine($"[{string.Join(", ", array)}]");
 ReleaseArray(array);
