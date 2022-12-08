@@ -28,7 +28,8 @@ static int SumEvenNumbers(int[] yourarray)
 }
 
 int[] myarray = GetRandomArray(10, 100, 1000);
-Console.WriteLine($"Исходный массив: [{string.Join(", ", myarray)}]");
+System.Console.WriteLine(($"Исходный массив: [{string.Join(", ", myarray)}]"));
+
 int result = SumEvenNumbers(myarray);
 System.Console.WriteLine();
 System.Console.WriteLine(result);

@@ -32,31 +32,30 @@ static int[] GetRandomArray(uint Length, int minValue, int maxValue)
         yourarray[i] = random.Next(minValue, maxValue);
     return yourarray;
 }
-int[] month = GetRandomArray(10, 1, 32);
+int[] month = GetRandomArray(19, 1, 32);
 Console.WriteLine($"Your array is: [{string.Join(" ", month)}]");
-int odd = 0;
-int even = 0;
+int odd = 0; int even = 0;
 for (int i = 0; i < month.Length; i++)
 {
     if (month[i] % 2 != 0)
-     Console.Write(month[i] + " ");
+        Console.Write(month[i] + " ");
 }
 Console.WriteLine("\n=================================");//для визуального отделения
 for (int k = 0; k < month.Length; k++)
 {
     if (month[k] % 2 == 0)
-        System.Console.Write(month[k] + " ");
+        Console.Write(month[k] + " ");
 }
 for (int j = 0; j < month.Length; j++)
 {
-    if(month[j]%2 !=0)
-    odd++;
+    if (month[j] % 2 != 0)
+        odd++;
     else
-    even++;
+        even++;
 }
-if (even >= odd)
+if (even >= odd)//из условия этот момент не до конца ясен
     Console.WriteLine("\nYes!");
-    else
+else
     System.Console.WriteLine("\nNo.");
 
 
