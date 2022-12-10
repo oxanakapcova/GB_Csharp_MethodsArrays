@@ -2,7 +2,7 @@
 Написать метод Resize изменяющий количество элементов массива (метод 
 должен иметь возможность увеличить или уменьшить количество элементов 
 массива).
-Array.Resize()
+Array.Resize() под капотом
 */
 Console.WriteLine("Hello, Methods, Arrays,loops, Ref & Generics!");
 

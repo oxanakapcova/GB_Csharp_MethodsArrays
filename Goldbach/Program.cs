@@ -13,7 +13,30 @@
 которых равна числу N. Первым выводится наименьшее число.
 */
 Console.WriteLine("Hello, arrays, Methods and Goldbach!");
-uint value = 6;
-//uint result = 3+3
 
-double
+Console.Write("Введите число: ");
+int value = Convert.ToInt32(Console.ReadLine());
+for (int i = 2; i <= value / 2; i++)
+{//чтоб не считать делители на 0 и 1
+    int countDel = 0;//счетчик делителей
+    for (int j = 2; j <= i / 2; j++)
+    {
+        if (i % j == 0)
+            countDel++;
+    }
+    if (countDel == 0)
+    {
+        countDel = 0;
+        int m = value - i;
+        for (int k = 2; k <= (m + 1) / 2; k++)
+        {
+            if (m % k == 0)
+                countDel++;
+        }
+        if (countDel == 0)
+        {
+            Console.WriteLine($"{i} {m}");
+            return;
+        }
+    }
+}//код писал учитель не было времени разбираться

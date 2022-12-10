@@ -1,4 +1,4 @@
-﻿// keyword REF
+﻿/* keyword REF
 Console.WriteLine("Hello, Ref && Methods && Arrays!");
 static void Bar(int[] myarray)
 {
@@ -10,10 +10,11 @@ Bar(array);
 ref int b = ref array[0];
 b = -6;
 
-static ref int Foo(int[] yourarray)
+//static ref int Foo(int[] yourarray)
 {
 
     return ref yourarray[0];
 }
-ref int b = ref Foo(array);
-//код не запускать!!! показан синтаксис
+//ref int b = ref Foo(array);
+код не запускать!!! показан синтаксис
+*/

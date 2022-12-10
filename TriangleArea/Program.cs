@@ -27,6 +27,6 @@ double x3 = Convert.ToDouble(Console.ReadLine());
 System.Console.WriteLine("Enter y3: ");
 double y3 = Convert.ToDouble(Console.ReadLine());
 double area = 0.5 * ((x2 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3));
-if (area<0)
-area*=-1;
+if (area < 0)
+    area *= -1;
 System.Console.WriteLine("================\n" + area);

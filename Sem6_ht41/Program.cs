@@ -7,12 +7,12 @@
 Console.WriteLine("Hello, Seminar 6!");
 System.Console.WriteLine("Enter amount of numbers:");
 uint amount = Convert.ToUInt32(Console.ReadLine());
-uint countPos = 0;
+uint countPositive = 0;
 for (uint i = 1; i <= amount; i++)
 {
     Console.WriteLine("Enter your number: ");
     int value = Convert.ToInt32(Console.ReadLine());
     if (value>0)
-    countPos+=1;
+    countPositive+=1;
 }
-System.Console.WriteLine("=========================\n"+countPos);
+System.Console.WriteLine("=========================\n"+countPositive);

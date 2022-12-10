@@ -20,3 +20,17 @@
                      IOX
 */
 Console.WriteLine("Hello, Strings & Recursion!");
+//количество перестановок равно факториалу элементов массива
+static void Changes(ref char[] yourarray)
+{
+    char[] newArray = new char[yourarray.Length];
+    newArray[0] = yourarray[1];
+    newArray[1] = yourarray[0];
+    yourarray = newArray;
+}
+char []myarray = {'A','B'};
+Changes(ref myarray);
+System.Console.WriteLine($"[{string.Join(", ",myarray)}]");
+
+
+

@@ -6,9 +6,9 @@
 */
 Console.WriteLine("Hello, Seminar 6!");
 Console.Write("Введите число: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int x, a0 = 0, a1 = 1;
-for (int i = 0; i < n; i++)
+int value = Convert.ToInt32(Console.ReadLine());
+int x, a0 = 0, a1 = 1;//0,1,и следующее неизвестное значение
+for (int i = 0; i < value; i++)
 {
     Console.Write($"{a0} ");
     x = a0 + a1;

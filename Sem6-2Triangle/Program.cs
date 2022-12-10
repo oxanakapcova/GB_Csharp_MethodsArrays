@@ -5,19 +5,15 @@
 суммы двух других сторон.
 */
 Console.WriteLine("Hello, Seminar 6 & Methods!");
-int a,b,c;
+int a, b, c;
 System.Console.WriteLine("Enter a:");
 a = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine("Enter b:");
 b = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine("Enter c:");
 c = Convert.ToInt32(Console.ReadLine());
-if (a>b+c && b>a+c && c>a+b)
-{
-    System.Console.WriteLine("No");
-    
-}
+if (a > b + c && b > a + c && c > a + b)
+    Console.WriteLine("Yes");
 else
-{
-    System.Console.WriteLine("Yes");
-}
+    Console.WriteLine("No");
+
