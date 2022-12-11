@@ -5,6 +5,7 @@
 1, -7, 567, 89, 223-> 3
 */
 Console.WriteLine("Hello, Seminar 6!");
+
 System.Console.WriteLine("Enter amount of numbers:");
 uint amount = Convert.ToUInt32(Console.ReadLine());
 uint countPositive = 0;

@@ -11,6 +11,8 @@ static int Sum(int a, int b, bool enableLogging = false)
     }
     return result;
 }
-Sum(3, 9, true);
+Sum(b: 5, a: 3, enableLogging: true);
 //если при вызове не указывать необязательный параметр то он по умолчанию
 //false
+//именнованные параметры а:5 и тд помогают легче читать код и 
+// указывают точное расположение переменных

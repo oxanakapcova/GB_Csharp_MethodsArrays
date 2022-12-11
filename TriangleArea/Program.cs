@@ -14,19 +14,25 @@
 */
 Console.WriteLine("Hello, Area of Triangles!");
 
-System.Console.WriteLine("Enter x1: ");
-double x1 = Convert.ToDouble(Console.ReadLine());
-System.Console.WriteLine("Enter y1: ");
-double y1 = Convert.ToDouble(Console.ReadLine());
-System.Console.WriteLine("Enter x2: ");
-double x2 = Convert.ToDouble(Console.ReadLine());
-System.Console.WriteLine("Enter y2: ");
-double y2 = Convert.ToDouble(Console.ReadLine());
-System.Console.WriteLine("Enter x3: ");
-double x3 = Convert.ToDouble(Console.ReadLine());
-System.Console.WriteLine("Enter y3: ");
-double y3 = Convert.ToDouble(Console.ReadLine());
-double area = 0.5 * ((x2 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3));
-if (area < 0)
-    area *= -1;
-System.Console.WriteLine("================\n" + area);
+static double AreaTriangle(double x1, double y1, double x2, double y2,
+double x3, double y3, bool enableLogging = false)
+{
+    double area = 0.5 * ((x2 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3));
+    if (area < 0)
+        area *= -1;
+    if (enableLogging)
+    {
+        System.Console.WriteLine("x1 = " + x1);
+        System.Console.WriteLine("y1 = " + y1);
+        System.Console.WriteLine("x2 = " + x2);
+        System.Console.WriteLine("y2 = " + y2);
+        System.Console.WriteLine("x3 = " + x3);
+        System.Console.WriteLine("y3 = " + y3);
+        System.Console.WriteLine("Area of triangle = " + area);
+    }
+    return area;
+}
+
+AreaTriangle(2, 1, 2, 4, 6, 1, true);
+//вывод на консоль можно убрать 
+
