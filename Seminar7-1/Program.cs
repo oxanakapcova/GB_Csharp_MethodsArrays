@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, Seminar 7 & arrays!");
+﻿Console.WriteLine("Hello, Seminar 7 & multidimensional arrays!");
 /*
 Задача 48: Задайте двумерный массив размера m на
 n, каждый элемент в массиве находится по формуле:
@@ -9,12 +8,24 @@ m = 3, n = 4
 1 2 3 4
 2 3 4 5
 */
-// task 46
+System.Console.WriteLine("Enter amount of rows and columns: ");
+string[] numbers  = Console.ReadLine().Split(string.Empty);
+//массив строк, указан разделитель
+int row = Convert.ToInt32(numbers[0]);//1 введенный элемент
+int column = Convert.ToInt32(numbers[1]);//2 введенный элемент
+int [,] anyArray = new int [row,column];
 
 
-// task 48
 
 
+
+
+
+
+
+
+
+/*
 void InputMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -34,4 +45,4 @@ Console.Write("Введите размеры матрицы: ");
 string[] numbers = Console.ReadLine().Split(" ");
 int[,] matrix = new int[int.Parse(numbers[0]), int.Parse(numbers[1])];
 InputMatrix(matrix);
-
+*/

@@ -12,8 +12,7 @@ uint countPositive = 0;
 for (uint i = 1; i <= amount; i++)
 {
     Console.WriteLine("Enter your number: ");
-    int value = Convert.ToInt32(Console.ReadLine());
-    if (value>0)
-    countPositive+=1;
+    if (Convert.ToInt32(Console.ReadLine()) > 0)//без переменной
+        countPositive += 1;
 }
-System.Console.WriteLine("=========================\n"+countPositive);
+System.Console.WriteLine("=========================\n" + countPositive);
