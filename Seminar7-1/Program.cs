@@ -9,7 +9,7 @@ m = 3, n = 4
 2 3 4 5
 */
 System.Console.WriteLine("Enter amount of rows and columns: ");
-string[] numbers  = Console.ReadLine().Split(string.Empty);
+string[] numbers  = Console.ReadLine().Split(" ");
 //массив строк, указан разделитель
 int row = Convert.ToInt32(numbers[0]);//1 введенный элемент
 int column = Convert.ToInt32(numbers[1]);//2 введенный элемент
