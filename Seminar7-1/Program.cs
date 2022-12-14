@@ -15,34 +15,26 @@ int row = Convert.ToInt32(numbers[0]);//1 введенный элемент
 int column = Convert.ToInt32(numbers[1]);//2 введенный элемент
 int [,] anyArray = new int [row,column];
 
-
-
-
-
-
-
-
-
-
-
-/*
-void InputMatrix(int[,] matrix)
+static void InPutMethod(int[,]yourArray)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < yourArray.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            matrix[i, j] = i + j;
-            Console.Write($"{matrix[i, j]} \t");
-        }
-        Console.WriteLine();
+       for (int j = 0; j < yourArray.GetLength(1); j++)
+       {
+        yourArray[i,j]= i+j;
+        System.Console.Write(yourArray[i,j]+"\t");
+       } 
+       System.Console.WriteLine();
     }
 }
+InPutMethod(anyArray);
 
 
-Console.Clear();
-Console.Write("Введите размеры матрицы: ");
-string[] numbers = Console.ReadLine().Split(" ");
-int[,] matrix = new int[int.Parse(numbers[0]), int.Parse(numbers[1])];
-InputMatrix(matrix);
-*/
+
+
+
+
+
+
+
+

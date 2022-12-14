@@ -1,50 +1,55 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Задача 50
-
-void InputMatrix(int[,] matrix)
+﻿/*
+Задача 51: Задайте двумерный массив. Найдите сумму элементов, 
+находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+Например, задан массив:
+1 4 7 2
+5 9 2 3
+8 4 2 4
+Сумма элементов главной диагонали: 1+9+2 = 12
+*/
+Console.WriteLine("Hello, Two-dimensional arrays & Methods!");
+static void InputArray(int[,] yourArray)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < yourArray.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            matrix[i, j] = new Random().Next(1, 11); // [1, 10]
-            Console.Write($"{matrix[i, j]} \t");
-        }
-        Console.WriteLine();
+        Random random = new Random();
+        for (int j = 0; j < yourArray.GetLength(1); j++)
+            yourArray[i, j] = random.Next(10);
     }
 }
-
-
-int ReleaseMatrix(int[,] matrix)
+static void PrintArray(int[,] yourArray)
+{
+    for (int i = 0; i < yourArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < yourArray.GetLength(1); j++)
+            System.Console.Write(yourArray[i, j] + "\t");
+        System.Console.WriteLine();
+    }
+}
+static void SumDiagonal(int[,] yourArray)
 {
     int sum = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < yourArray.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        
+        for (int j = 0; j < yourArray.GetLength(1); j++)
         {
-            if (i == j && j != matrix.GetLength(1) - 1 && i != matrix.GetLength(0))
-            {
-                sum += matrix[i, j];
-                Console.Write($"{matrix[i, j]} + ");
-            }
-            else if (i == j)
-            {
-                sum += matrix[i, j];
-                Console.Write($"{matrix[i, j]} = ");
-            }
+            if (i == j)
+                sum += yourArray[i, j];
         }
     }
-    return sum;
+        System.Console.WriteLine("Sum is: "+ sum);
 }
+int [,]anyArray = new int [6,5];
+InputArray(anyArray);
+PrintArray(anyArray);
+System.Console.WriteLine("=========================================");
+SumDiagonal(anyArray);
 
 
-Console.Clear();
-Console.Write("Введите размеры матрицы: ");
-string[] numbers = Console.ReadLine().Split(" ");
-int[,] matrix = new int[int.Parse(numbers[0]), int.Parse(numbers[1])];
-Console.WriteLine("Двумерный массив: ");
-InputMatrix(matrix);
-Console.WriteLine();
-Console.WriteLine("Результат: ");
-Console.WriteLine(ReleaseMatrix(matrix));
+
+
+
+
+
+
