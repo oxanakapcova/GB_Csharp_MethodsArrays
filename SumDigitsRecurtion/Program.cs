@@ -1,2 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// программа считает сумму цифр числа, метод рекурсия
+Console.WriteLine("Hello, recursion!");
+static int SumDigits(int yourValue)
+{
+    if (yourValue < 10)
+        return yourValue;
+    int digit = yourValue % 10;
+    int intermediateValue = yourValue / 10;
+    return digit + SumDigits(intermediateValue);
+}
+int myValue = 12345;
+int result = SumDigits(myValue);
+System.Console.WriteLine(result);
+/*переменные созданы для удобства и понятия, можно записать так:
+if (yourValue < 10)
+    return yourValue;
+return yourValue % 10 + SumDigits(yourValue / 10);
+сложение будет производится рекурсивно когда произойдет условие 
+выхода из рекурсии
+*/

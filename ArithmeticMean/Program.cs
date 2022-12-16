@@ -42,5 +42,5 @@ int[,] anyArray = new int[3, 5];
 InputArray(anyArray);
 PrintArray(anyArray);
 ArithmeticMean(anyArray);
-
+Console.ReadLine();
 

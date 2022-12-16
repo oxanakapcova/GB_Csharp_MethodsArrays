@@ -3,13 +3,16 @@
 512=5+1+2=8
 */
 Console.WriteLine("Hello, Methods & cycles!");
-int yourValue = 561;
-
-int result = yourValue%10;
-int intermediateResult = yourValue/10;
-for (int i = 0; i < length; i++)
+static int SumDigits(int yourValue)
 {
-    
+    int result = 0;
+    while (yourValue > 0)
+    {
+        result += yourValue % 10;
+        yourValue /= 10;
+    }
+    return result;//не забывать возвращать результат
 }
-System.Console.WriteLine(result);
-System.Console.WriteLine(intermediateResult);
+int myValue = 5618;
+int myResult = SumDigits(myValue);
+System.Console.WriteLine(myResult);

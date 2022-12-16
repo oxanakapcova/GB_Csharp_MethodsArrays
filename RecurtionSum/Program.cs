@@ -1,16 +1,23 @@
-﻿// Найти сумму элементов массива с помощью рекурсии
-Console.WriteLine("Hello, Recurtion & Arrays!");
-static int SumElements(int[] yourArray, int i = 0)
+﻿internal class Program
 {
-    if (i >= yourArray.Length)
-        return 0;//без значения код не скомпилируется а условие выхода
-                 //необходимо, 0 не повлияет на алгоритм нахождения суммы
-    int result = SumElements(yourArray, i + 1);
-    return yourArray[i]+result;
-}//return yourArray[i]+SumElements(yourArray,i+1)
-int[] anyArray = { 1, 2, 3, 4, 5, 6 };
-int result = SumElements(anyArray);
-System.Console.WriteLine(result);
+    private static void Main(string[] args)
+    {
+        // Найти сумму элементов массива с помощью рекурсии
+        Console.WriteLine("Hello, Recurtion & Arrays!");
+        int[] anyArray = { 1, 2, 3, 4, 5, 6 };
+        int result = SumElements(anyArray);
+        Console.WriteLine(result);
+    }
+
+    private static int SumElements(int[] yourArray, int i = 0)
+    {
+        if (i >= yourArray.Length)
+            return 0;//без значения код не скомпилируется а условие выхода
+                     //необходимо, 0 не повлияет на алгоритм нахождения суммы
+        int result = SumElements(yourArray, i + 1);
+        return yourArray[i] + result;
+    }//return yourArray[i]+SumElements(yourArray,i+1)
+}
 /*метод вначале вызывает сам себя и складывает в стэк значения всех
 индексов по порядку пока не доходит до значения указанного как выход
 из рекурсии и тогда в стек попадает 0, после этого начинает отрабатывать
