@@ -1,4 +1,4 @@
-﻿// программа считает сумму цифр числа, метод рекурсия
+﻿/* программа считает сумму цифр числа, метод рекурсия
 Console.WriteLine("Hello, recursion!");
 static int SumDigits(int yourValue)
 {
@@ -18,3 +18,12 @@ return yourValue % 10 + SumDigits(yourValue / 10);
 сложение будет производится рекурсивно когда произойдет условие 
 выхода из рекурсии
 */
+static int SumDigits(int value)
+{
+    if (value < 10)
+        return value;
+    int digit = value % 10;
+    int intermediateValue = value / 10;
+    return digit + SumDigits(intermediateValue);
+}
+System.Console.WriteLine(SumDigits(1235));

@@ -55,3 +55,4 @@ void FillImage(int row, int col)
 PrintImage(pic);
 FillImage(13, 13);
 PrintImage(pic);
+Console.ReadLine();

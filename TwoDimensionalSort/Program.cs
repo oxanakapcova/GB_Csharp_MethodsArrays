@@ -29,21 +29,30 @@ static void PrintArray(int[,] yourArray)
         System.Console.WriteLine();
     }
 }
+
 int[,] anyArray = new int[3, 5];
 InPutArray(anyArray);
 PrintArray(anyArray);
+sortDescending(ref anyArray);
+System.Console.WriteLine("====================================");
+PrintArray(anyArray);
 
-static void Sort(int[,] yourArray)
+void sortDescending(int[,] yourArray)
 {
-    for (int i = 0; i < yourArray.GetLength(0); i++)
+  for (int i = 0; i < yourArray.GetLength(0); i++)
+  {
+    for (int j = 0; j < yourArray.GetLength(1); j++)
     {
-        for (int j = 0; j < yourArray.GetLength(1); j++)
+      for (int k = 0; k < matrix.GetLength(1) - 1; k++)
+      {
+        if (matrix[i, k] < matrix[i, k + 1])
         {
-            int max = yourArray[i, j];
-            if (yourArray[i, j] > max)
-            {
-                yourArray[i, j]=max;
-            }
+          int temp = matrix[i, k + 1];
+          matrix[i, k + 1] = matrix[i, k];
+          matrix[i, k] = temp;
         }
+      }
     }
+  }
 }
+*/

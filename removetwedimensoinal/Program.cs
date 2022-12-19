@@ -38,15 +38,16 @@ static int IndexOff(int[,] yourArray, int value)
 {
     for (int i = 0; i < yourArray.GetLength(0); i++)
     {
-        
-        i = yourArray[i];
-        j =yourArray[j];
+        int minRow = 0; int minColumn = 0;
         for (int j = 0; j < yourArray.GetLength(1); j++)
         {
             if (yourArray[i, j] == value)
-            return i,j;
-                
+            {
+                minRow = i;
+                minColumn = j;
+            }
         }
+        
     }
     return -1;//если числа не найдет
 }
