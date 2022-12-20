@@ -30,29 +30,33 @@ static void PrintArray(int[,] yourArray)
     }
 }
 
-int[,] anyArray = new int[3, 5];
-InPutArray(anyArray);
-PrintArray(anyArray);
-sortDescending(ref anyArray);
-System.Console.WriteLine("====================================");
-PrintArray(anyArray);
+
 
 void sortDescending(int[,] yourArray)
 {
-  for (int i = 0; i < yourArray.GetLength(0); i++)
-  {
-    for (int j = 0; j < yourArray.GetLength(1); j++)
+  
+    for (int i = 0; i < yourArray.GetLength(0); i++)
     {
-      for (int k = 0; k < matrix.GetLength(1) - 1; k++)
-      {
-        if (matrix[i, k] < matrix[i, k + 1])
+        for (int j = 0; j < yourArray.GetLength(1); j++)
         {
-          int temp = matrix[i, k + 1];
-          matrix[i, k + 1] = matrix[i, k];
-          matrix[i, k] = temp;
+            for (int k = 0; k < yourArray.GetLength(1) - 1; k++)
+            {
+                if (yourArray[i, k] < yourArray[i, k + 1])
+                {
+                    int temp = yourArray[i, k + 1];
+                    yourArray[i, k + 1] = yourArray[i, k];
+                    yourArray[i, k] = temp;
+                }
+            }
         }
-      }
     }
-  }
 }
-*/
+int[,] anyArray = new int[3, 5];
+InPutArray(anyArray);
+PrintArray(anyArray);
+sortDescending( anyArray);
+System.Console.WriteLine("====================================");
+PrintArray(anyArray);
+Console.ReadLine();
+//третий цикл создан для возможности сравнивать актуальное значение и
+//стоящее рядом, логика обычная как в одномерном массиве
