@@ -16,7 +16,7 @@ static void InPutArray(int[,] yourArray)
     {
         Random random = new Random();
         for (int j = 0; j < yourArray.GetLength(1); j++)
-            yourArray[i, j] = random.Next(100);
+            yourArray[i, j] = random.Next(10);
     }
 }
 static void PrintArray(int[,] yourArray)
@@ -28,9 +28,9 @@ static void PrintArray(int[,] yourArray)
         System.Console.WriteLine();
     }
 }
-
+/*
 static int SumRow(int[,] yourArray, int numberrow)
-{
+{//найдет сумму элементов строки по указанному индексу
     int sum = 0;
     for (int j = 0; j < yourArray.GetLength(1); j++)
     {
@@ -39,9 +39,30 @@ static int SumRow(int[,] yourArray, int numberrow)
 
     return sum;
 }
-int[,] anyArray = new int[3, 5];
+*/
+static void SumInRow(int[,] yourArray)
+{
+    int minRow = 0;
+    int minSumRow = 0;
+    int sumRow = 0;
+    for (int i = 0; i < yourArray.GetLength(1); i++)
+        minRow += yourArray[0, i];
+    for (int i = 0; i < yourArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < yourArray.GetLength(1); j++)
+            sumRow += yourArray[i, j];
+        if (sumRow < minRow)
+        {
+            minRow = sumRow;
+            minSumRow = i;
+        }
+        sumRow = 0;
+    }
+    Console.Write($"{minSumRow + 1} строка");
+}
+
+int[,] anyArray = new int[3, 4];
 InPutArray(anyArray);
 PrintArray(anyArray);
-int result = SumRow(anyArray, 1);
 System.Console.WriteLine("======================================");
-System.Console.WriteLine(result);
+SumInRow(anyArray);
